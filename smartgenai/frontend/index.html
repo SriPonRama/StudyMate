@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Prep App</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Exam Prep App</h1>
+
+    <!-- Document Upload -->
+    <h2>Upload Document</h2>
+    <input type="file" id="pdfUpload" accept=".pdf">
+    <button onclick="uploadPDF()">Upload</button>
+    <p id="uploadStatus" class="status-message"></p>
+    <input type="hidden" id="docIdInput">  <!-- Hidden input to store doc_id -->
+
+    <!-- Index Build -->
+    <h2>Build Index</h2>
+    <button onclick="buildIndex()">Build Index</button>
+    <p id="indexStatus" class="status-message"></p>
+
+    <!-- Question Answering -->
+    <h2>Question Answering</h2>
+    <input type="text" id="questionInput" placeholder="Enter your question">
+    <button onclick="askQuestion()">Ask Question</button>
+    <p id="answer" class="answer-area"></p>
+    <div id="spans" class="spans-container"></div>
+
+    <!-- Recall Map -->
+    <h2>Recall Map</h2>
+    <button onclick="getRecallMap()">Generate Recall Map</button>
+    <img id="recallMap" src="" alt="Recall Map" style="max-width: 500px;">
+
+    <!-- Study Plan Generation -->
+    <h2>Generate Study Plan</h2>
+    <label for="subjects">Subjects (comma-separated):</label>
+    <input type="text" id="subjectsInput" placeholder="e.g., Math, Physics">
+    <label for="examDate">Exam Date (YYYY-MM-DD):</label>
+    <input type="date" id="examDateInput">
+    <label for="hoursPerDay">Hours Per Day:</label>
+    <input type="number" id="hoursPerDayInput" value="2">
+    <label for="mode">Study Mode:</label>
+    <select id="modeInput">
+        <option value="focused">Focused</option>
+        <option value="relaxed">Relaxed</option>
+    </select>
+    <label for="mood">Mood:</label>
+    <select id="moodInput">
+        <option value="motivated">Motivated</option>
+        <option value="stressed">Stressed</option>
+    </select>
+    <button onclick="createStudyPlan()">Create Study Plan</button>
+    <div id="studyPlan" class="study-plan-container"></div>
+
+    <!-- Quiz Generation -->
+    <h2>Generate Quiz</h2>
+    <label for="quizQuestionCount">Number of Questions:</label>
+    <input type="number" id="quizQuestionCount" value="5">
+    <button onclick="generateQuiz()">Generate Quiz</button>
+    <p id="quizStatus" class="status-message"></p>
+    <div id="quizContainer" class="quiz-container"></div>
+
+    <!-- Power Hour Generation (Placeholder) -->
+    <h2>Power Hour</h2>
+    <button onclick="generatePowerHour()">Generate Power Hour PDFs</button>
+    <p id="powerHourStatus" class="status-message"></p>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "uvicorn: run",
+      "type": "process",
+      "command": "uvicorn",
+      "args": [
+        "backend.app:app",
+        "--reload",
+        "--host",
+        "0.0.0.0",
+        "--port",
+        "8000"
+      ],
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+fastapi==0.109.2
+uvicorn==0.29.0
+SQLAlchemy==2.0.29
+sqlmodel==0.0.17
+PyMuPDF==1.23.6
+matplotlib==3.8.3
+networkx==3.2.1
+sentence-transformers==2.3.1
+python-dotenv==1.0.1
+pytest==8.3.0
+requests==2.31.0
+Pillow==10.2.0
+wordcloud==1.9.3
+python-multipart==0.0.9
